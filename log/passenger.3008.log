@@ -1,0 +1,68 @@
+[ 2013-10-11 22:09:07.1677 2795/b74a4700 agents/Watchdog/Main.cpp:485 ]: Options: { 'analytics_log_user' => 'chisomo', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS41Y3lnZ2kvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'chisomo', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.8', 'default_user' => 'chisomo', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.5cyggi/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwOAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_pid' => '2794', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-10-11 22:09:07.1822 2798/b7413700 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.2794/generation-0/request
+[ 2013-10-11 22:09:07.2242 2803/b6ae4980 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.2794/generation-0/logging
+[ 2013-10-11 22:09:07.2273 2795/b74a4700 agents/Watchdog/Main.cpp:669 ]: All Phusion Passenger agents started!
+[ 2013-10-11 22:09:09.2640 2798/b59feb40 Pool2/Spawner.h:738 ]: [App 2831 stdout] 
+[ 2013-10-11 22:09:12.1859 2798/b59feb40 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /var/www/hello_world#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:455)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:558)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:744)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2013-10-11 22:09:12.1867 2798/b61ffb40 agents/HelperAgent/RequestHandler.h:1975 ]: [Client 20] Cannot checkout session. An error occured while starting up the preloader.
+Error page:
+No such file or directory - /var/www/hello_world/config/database.yml (Errno::ENOENT)
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:902:in `read'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:902:in `database_configuration'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:437:in `initialize_database'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:141:in `process'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:113:in `send'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:113:in `run'
+  /var/www/hello_world/config/environment.rb:9
+  /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+  /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+  /usr/lib/ruby/gems/1.8/gems/passenger-4.0.20/helper-scripts/classic-rails-preloader.rb:92:in `preload_app'
+  /usr/lib/ruby/gems/1.8/gems/passenger-4.0.20/helper-scripts/classic-rails-preloader.rb:179
+
+[ 2013-10-11 22:09:26.3601 2798/b59feb40 Pool2/Spawner.h:738 ]: [App 2854 stdout] 
+[ 2013-10-11 22:09:28.4110 2798/b59feb40 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /var/www/hello_world#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:455)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:558)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:744)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2013-10-11 22:09:28.4120 2798/b61ffb40 agents/HelperAgent/RequestHandler.h:1975 ]: [Client 20] Cannot checkout session. An error occured while starting up the preloader.
+Error page:
+No such file or directory - /var/www/hello_world/config/database.yml (Errno::ENOENT)
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:902:in `read'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:902:in `database_configuration'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:437:in `initialize_database'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:141:in `process'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:113:in `send'
+  /usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/initializer.rb:113:in `run'
+  /var/www/hello_world/config/environment.rb:9
+  /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+  /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+  /usr/lib/ruby/gems/1.8/gems/passenger-4.0.20/helper-scripts/classic-rails-preloader.rb:92:in `preload_app'
+  /usr/lib/ruby/gems/1.8/gems/passenger-4.0.20/helper-scripts/classic-rails-preloader.rb:179
+
+[ 2013-10-11 22:13:00.3667 3072/b7452700 agents/Watchdog/Main.cpp:485 ]: Options: { 'analytics_log_user' => 'chisomo', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5ubGgza3AvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'chisomo', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.8', 'default_user' => 'chisomo', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.nlh3kp/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwOAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_pid' => '3071', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-10-11 22:13:00.3866 3075/b7420700 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3071/generation-0/request
+[ 2013-10-11 22:13:00.5256 3081/b6adc980 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3071/generation-0/logging
+[ 2013-10-11 22:13:00.5290 3072/b7452700 agents/Watchdog/Main.cpp:669 ]: All Phusion Passenger agents started!
+[ 2013-10-11 22:13:02.4963 3075/b70ffb40 Pool2/Spawner.h:738 ]: [App 3108 stdout] 
+[ 2013-10-11 22:13:05.4932 3075/b70ffb40 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/hello_world started on PID 3108, listening on unix:/tmp/passenger.1.0.3071/generation-0/backends/preloader.3108
+[ 2013-10-11 22:15:09.2216 3258/b744a700 agents/Watchdog/Main.cpp:485 ]: Options: { 'analytics_log_user' => 'chisomo', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xbTd1MjVkL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'chisomo', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.8', 'default_user' => 'chisomo', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1m7u25d/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwOAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_pid' => '3254', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-10-11 22:15:09.2444 3269/b73d6700 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3254/generation-0/request
+[ 2013-10-11 22:15:09.2717 3274/b6ae2980 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3254/generation-0/logging
+[ 2013-10-11 22:15:09.2740 3258/b744a700 agents/Watchdog/Main.cpp:669 ]: All Phusion Passenger agents started!
+[ 2013-10-11 22:15:11.3165 3269/b57bbb40 Pool2/Spawner.h:738 ]: [App 3305 stdout] 
+[ 2013-10-11 22:15:13.8141 3269/b57bbb40 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/hello_world started on PID 3305, listening on unix:/tmp/passenger.1.0.3254/generation-0/backends/preloader.3305
+[ 2013-10-11 22:16:01.7216 3387/b744b700 agents/Watchdog/Main.cpp:485 ]: Options: { 'analytics_log_user' => 'chisomo', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5qM2ZrYnkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'chisomo', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.8', 'default_user' => 'chisomo', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.j3fkby/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwOAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_pid' => '3386', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-10-11 22:16:01.7373 3390/b74ce700 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3386/generation-0/request
+[ 2013-10-11 22:16:01.7611 3395/b6ac7980 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3386/generation-0/logging
+[ 2013-10-11 22:16:01.7645 3387/b744b700 agents/Watchdog/Main.cpp:669 ]: All Phusion Passenger agents started!
+[ 2013-10-11 22:16:03.8041 3390/b5abdb40 Pool2/Spawner.h:738 ]: [App 3423 stdout] 
+[ 2013-10-11 22:16:06.3815 3390/b5abdb40 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/hello_world started on PID 3423, listening on unix:/tmp/passenger.1.0.3386/generation-0/backends/preloader.3423
