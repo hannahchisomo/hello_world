@@ -22,6 +22,7 @@ class PersonController < ApplicationController
   end
 
   def update
+   raise params.to_yaml
    @person = Person.find(params[:person][:id])
    @person.first_name = params[:person][:first_name]
    @person.last_name = params[:person][:last_name]
